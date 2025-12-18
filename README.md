@@ -2,6 +2,22 @@
 
 `Terminal.LLM` is a Streamlit app that pulls *live-ish* market context (prices + headlines) via Yahoo Finance (`yfinance`) and generates a “Morning Debrief” using either **Gemini** or **OpenAI**.
 
+## Idea
+
+Terminal.LLM is a simple “mini Bloomberg Terminal” for a daily market briefing — hence **Terminal**, but powered by an **LLM**.
+
+Most AI market summaries are either generic or drift into guesswork because they aren’t tied to the latest tape/news. Terminal.LLM keeps the model grounded by:
+
+- Fetching a small, structured “context snapshot” (prices + headlines) on demand
+- Displaying *retrieved* and best-effort *as-of* timestamps for transparency
+- Letting users choose their provider/model (Gemini or OpenAI) without changing the workflow
+
+The goal is a fast, terminal-like loop: refresh → read the brief → ask follow-ups.
+
+## Screenshot
+
+![Terminal.LLM UI](assets/screenshot.png)
+
 Main code:
 - `app.py` — Streamlit UI + LLM integration (Gemini/OpenAI switch)
 - `data_fetcher.py` — market data + news retrieval (yfinance) with “retrieved at” timestamps
