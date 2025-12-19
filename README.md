@@ -2,6 +2,9 @@
 
 `Terminal.LLM` is a Streamlit app that pulls *live-ish* market context (prices + headlines) via Yahoo Finance (`yfinance`) and generates a “Morning Debrief” using either **Gemini** or **OpenAI**.
 
+Live app:
+- https://terminalllm.streamlit.app/
+
 ## Idea
 
 Terminal.LLM is a simple “mini Bloomberg Terminal” for a daily market briefing — hence **Terminal**, but powered by an **LLM**.
